@@ -16,7 +16,7 @@ def lambda_handler(event, context):
     """
     
     query2 = """
-        create table user_features_2 with (external_location = 's3://imba-yan/features/user_features_2/', format='parquet')
+        create table user_features_2 with (external_location = 's3://[my-s3-bucket]/features/user_features_2/', format='parquet')
         as (
           select 
             user_id,
