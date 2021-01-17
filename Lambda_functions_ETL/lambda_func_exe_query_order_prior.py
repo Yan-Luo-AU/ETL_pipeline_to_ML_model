@@ -16,7 +16,7 @@ def lambda_handler(event, context):
     """
     
     query2 = """
-    create table order_products_prior with (external_location = 's3://imba-yan/features/order_products_prior/', format='parquet')
+    create table order_products_prior with (external_location = 's3://[my-s3-bucket]/features/order_products_prior/', format='parquet')
     as (Select a.*,
     b.product_id,
     b.add_to_cart_order,
