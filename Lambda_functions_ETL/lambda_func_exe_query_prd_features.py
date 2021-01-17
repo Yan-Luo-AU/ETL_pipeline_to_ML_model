@@ -17,7 +17,7 @@ def lambda_handler(event, context):
     
     query2 = """
     
-   CREATE TABLE prd_features WITH (external_location = 's3://imba-yan/features/prd_features/',
+   CREATE TABLE prd_features WITH (external_location = 's3://[my-s3-bucket]/features/prd_features/',
     format = 'parquet') 
     as (
     SELECT product_id,
